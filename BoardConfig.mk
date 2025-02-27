@@ -2,14 +2,25 @@ DEVICE_PATH := device/itel/P671L
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Build hacks
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system \
-    system_ext \
-    product \
+    odm \
+    system_dlkm \
     vendor \
-    vendor_boot \
+    system \
+    boot \
+    vbmeta_vendor \
+    vbmeta \
+    vbmeta_system \
+    system_ext \
+    vendor_dlkm \
+    dtbo \
+    product
 
 
 
@@ -24,7 +35,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 #TARGET_USES_UEFI := true
 # Assert
-TARGET_OTA_ASSERT_DEVICE := itel-A666LN
+TARGET_OTA_ASSERT_DEVICE := itel-P671L
 
 
 # Architecture
@@ -52,7 +63,7 @@ TARGET_SCREEN_DENSITY := 400
 # Kernel
 BOARD_VENDOR_BASE := 0x00000000
 # TODO: remove "androidboot.." from kernel cmdline after verification
-BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 buildvariant=user
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 bootconfig bootconfig
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -92,6 +103,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 
+BOARD_SUPPRESS_SECURE_ERASE := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product vendor vendor_dlkm odm
@@ -119,10 +132,10 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-BOARD_USES_METADATA_PARTITION := true
-TW_USE_FSCRYPT_POLICY := 2
+#TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO_FBE := true
+#BOARD_USES_METADATA_PARTITION := true
+#TW_USE_FSCRYPT_POLICY := 2
 #BOARD_FORCE_ENCRYPT := false
 #TW_PREPARE_DATA_MEDIA_EARLY := true
 
@@ -134,7 +147,7 @@ PLATFORM_VERSION := 14
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # TWRP Configuration
-TW_HAS_DOWNLOAD_MODE := true
+#TW_HAS_DOWNLOAD_MODE := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -142,8 +155,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_SDCARD_ON_DATA := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
+#TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
@@ -157,6 +170,6 @@ TW_NO_FLASH_CURRENT_TWRP := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
 
-TW_USE_NEW_MINADB := true
-TW_DEVICE_VERSION := Itel_P55_NFC-Massatrio16
+#TW_USE_NEW_MINADB := true
+TW_DEVICE_VERSION := Itel_P65-Massatrio16
 TW_LOAD_VENDOR_BOOT_MODULES := true
