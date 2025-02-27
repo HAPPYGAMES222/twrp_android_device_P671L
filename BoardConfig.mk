@@ -1,3 +1,4 @@
+DEVICE_PATH := device/itel/P671L
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
