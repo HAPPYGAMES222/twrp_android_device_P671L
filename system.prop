@@ -1,2 +1,9 @@
+ro.sys.usb.bicr=no
+ro.sys.usb.storage.type=adb,mtp
+persist.service.adb.enable=1
+persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
-ro.sys.usb.storage.type=mtp
+ro.debuggable=1
+external_storage.projid.enabled=1
+external_storage.casefold.enabled=1
+external_storage.sdcardfs.enabled=0
