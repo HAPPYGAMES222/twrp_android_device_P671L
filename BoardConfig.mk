@@ -134,7 +134,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 TW_HAS_MTP := true
-TW_MTP_DEVICE := /dev/mtp_usb
+#TW_MTP_DEVICE := /dev/mtp_usb
 
 # Crypto
 #TW_INCLUDE_CRYPTO := true
