@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
+LOCAL_PATH := device/itel/P671L
 # Enable Virtual A/B OTA
 
 ENABLE_VIRTUAL_AB := true
@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-LOCAL_PATH := device/itel/P671L
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
