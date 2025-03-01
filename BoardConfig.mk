@@ -22,7 +22,7 @@ AB_OTA_PARTITIONS += \
     dtbo \
     product
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+RELINK_SOURCE_FILES += \
 $(TARGET_OUT_SHARED_LIBRARIES)/libopenaes.so.toc\
 
 #vendor_boot configuration
