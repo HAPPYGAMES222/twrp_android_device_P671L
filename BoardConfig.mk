@@ -123,7 +123,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 
 # Platform
-#BOARD_USES_SPRD_HARDWARE := true
+BOARD_USES_SPRD_HARDWARE := true
 TARGET_BOARD_PLATFORM := ums9230
 
 # Recovery
