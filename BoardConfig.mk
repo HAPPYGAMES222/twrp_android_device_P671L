@@ -22,7 +22,8 @@ AB_OTA_PARTITIONS += \
     dtbo \
     product
 
-
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
 
 #vendor_boot configuration
 TARGET_NO_RECOVERY := true
