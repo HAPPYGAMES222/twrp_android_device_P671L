@@ -10,6 +10,3 @@ sys.usb.controller=musb-hdrc.1.auto
 ro.debuggable=1
 sys.usb.ffs.ready=1
 sys.usb.state=adb
-external_storage.projid.enabled=1
-external_storage.casefold.enabled=1
-external_storage.sdcardfs.enabled=0
