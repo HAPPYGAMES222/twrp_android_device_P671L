@@ -23,8 +23,8 @@ AB_OTA_PARTITIONS += \
     product
 
 
-TARGET_SCREEN_HEIGHT := 1600
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
 #vendor_boot configuration
 TARGET_NO_RECOVERY := true
@@ -164,7 +164,7 @@ PLATFORM_VERSION := 16.1.0
 
 
 TW_INCLUDE_FASTBOOTD := true
-TW_THEME := portrait_hdpi
+#TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
