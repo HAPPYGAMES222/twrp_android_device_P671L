@@ -1,2 +1,12 @@
-persist.sys.usb.config=mtp,adb
-ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.storage.type=adb,mtp
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=adb
+service.adb.root=1
+sys.usb.config=1
+sys.usb.configfs=1
+sys.usb.controller=musb-hdrc.1.auto
+ro.debuggable=1
+sys.usb.ffs.ready=1
+sys.usb.state=adb
