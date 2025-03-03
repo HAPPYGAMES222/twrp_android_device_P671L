@@ -9,7 +9,13 @@
 
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
+
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service \
+    libhealthd.$(PRODUCT_PLATFORM)
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -22,15 +28,16 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+
 
 PRODUCT_PACKAGES += \
-    bootctrl.ums9230
+    bootctrl.ums9230 \
+    bootctrl \
+    boitctrl.recovery
 
-
+PRODUCT_PACKAGES += \
+    vendor.sprd.hardware.boot@1.2-impl
+    vendor.sprd.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -38,12 +45,11 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
-
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 PRODUCT_PACKAGES += \
-    libion.recovery \
     android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
-	fastbootd
+    fastbootd
