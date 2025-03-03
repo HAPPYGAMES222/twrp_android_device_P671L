@@ -23,8 +23,8 @@ AB_OTA_PARTITIONS += \
     product
 
 
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
 
 #vendor_boot configuration
 TARGET_NO_RECOVERY := true
@@ -39,7 +39,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := itel-P671L
 
-BOARD_STORE_RAMDISK_IN_VENDORBOOT := true
+#BOARD_STORE_RAMDISK_IN_VENDORBOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -61,8 +61,8 @@ TARGET_BOOTLOADER_BOARD_NAME := P671L
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 480
-BOARD_KERNEL_SEPARATED_DTBO := true
+#TARGET_SCREEN_DENSITY := 480
+#BOARD_KERNEL_SEPARATED_DTBO := true
 
 
 # Kernel
@@ -173,7 +173,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
-TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
+#TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
 
 
 
