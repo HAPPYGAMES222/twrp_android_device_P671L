@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/itel/S685LN
+DEVICE_PATH := device/itel/P671L
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -32,7 +32,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 #TARGET_USES_UEFI := true
 # Assert
-TARGET_OTA_ASSERT_DEVICE := itel-S685LN
+TARGET_OTA_ASSERT_DEVICE := itel-P671L
 
 
 TARGET_ARCH := arm64
@@ -50,7 +50,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := S685LN
+TARGET_BOOTLOADER_BOARD_NAME := P671L
 TARGET_NO_BOOTLOADER := true
 
 
@@ -164,6 +164,6 @@ TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
 
 TW_USE_NEW_MINADB := true
-TW_DEVICE_VERSION := Itel_S25-Massatrio16
+TW_DEVICE_VERSION := Itel_P65-Massatrio16
 
 #additional lib for fix decryption
