@@ -9,7 +9,7 @@
 #bootctrl
 
 
-LOCAL_PATH := device/itel/S685LN
+LOCAL_PATH := device/itel/P671L
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
