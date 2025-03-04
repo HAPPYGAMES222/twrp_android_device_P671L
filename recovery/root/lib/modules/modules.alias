@@ -382,10 +382,3 @@ alias of:N*T*Csprd,sc9860-gpio gpio_sprd
 alias of:N*T*Csprd,sc9860-gpioC* gpio_sprd
 alias of:N*T*Cchipone-tddi chipone_icnl99xx
 alias of:N*T*Cchipone-tddiC* chipone_icnl99xx
-alias of:N*T*Cadaptive-touchscreen chipone_icnl99xx
-alias of:N*T*Cadaptive-touchscreenC* chipone_icnl99xx
-alias of:N*T*Cadaptive-touchscreen omnivision_td4160
-alias of:N*T*Cadaptive-touchscreenC* omnivision_td4160
-alias spi:omnivision_tcm_spi omnivision_td4160
-alias of:N*T*Comnivision,tcm-spi omnivision_td4160
-alias of:N*T*Comnivision,tcm-spiC* omnivision_td4160
