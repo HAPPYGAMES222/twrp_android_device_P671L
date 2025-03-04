@@ -55,7 +55,7 @@ TARGET_NO_BOOTLOADER := true
 
 TW_ENABLE_MTP := true
 TW_ALWAYS_ENABLE_MTP := true
-
+TW_NEVER_DISABLE_MTP := true
 
 
 # Kernel
