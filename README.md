@@ -1,4 +1,4 @@
-# Android device tree for Itel S25 (itel-S685LN)
+# Android device tree for Itel P65 (itel-P671L)
 
 ```
 #
