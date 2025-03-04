@@ -161,6 +161,4 @@ tran_mm_collect.ko
 tnek.ko
 tranbootprof.ko
 trans_sched.ko
-adaptive-ts.ko
 chipone_icnl99xx.ko
-omnivision_td4160.ko
