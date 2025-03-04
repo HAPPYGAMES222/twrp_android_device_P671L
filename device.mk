@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
     boitctrl.recovery
 
 PRODUCT_PACKAGES += \
-    vendor.sprd.hardware.boot@1.2-impl
+    vendor.sprd.hardware.boot@1.2-impl \
     vendor.sprd.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES += \
