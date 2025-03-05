@@ -34,6 +34,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := itel-P671L
 
+TW_NO_FASTBOOT_BOOT := true
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -61,7 +62,7 @@ TW_NEVER_DISABLE_MTP := true
 # Kernel
 BOARD_VENDOR_BASE := 0x00000000
 # TODO: remove "androidboot.." from kernel cmdline after verification
-BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 bootconfig bootconfig
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
