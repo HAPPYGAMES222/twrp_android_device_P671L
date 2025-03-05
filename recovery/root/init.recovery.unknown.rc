@@ -2,12 +2,7 @@
 import /init.recovery.common.rc
 export LD_LIBRARY_PATH /system/lib64:/vendor/lib64
 
-symlink
-on init
-start adbd
-    setprop sys.usb.configfs 1
-    setprop sys.usb.ffs.aio_compat 1
-    start adbd
+
 
 chown system root /system/bin/load_modules.sh
 chown system root /system/bin/prepdecrypt.sh
