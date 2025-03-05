@@ -2,12 +2,7 @@ ro.sys.usb.bicr=no
 ro.sys.usb.storage.type=adb,mtp
 persist.service.adb.enable=1
 persist.service.debuggable=1
-persist.sys.usb.config=adb
-service.adb.root=1
-sys.usb.config=1
-sys.usb.configfs=1
-sys.usb.controller=musb-hdrc.1.auto
-ro.debuggable=1
-sys.usb.ffs.ready=1
-sys.usb.state=adb
-persist.service.mtp.enable 1
+persist.sys.usb.config=mtp,adb
+ro.recovery.usb.vid=18D1
+ro.recovery.usb.adb.pid=D001
+ro.recovery.usb.fastboot.pid=4EE0
