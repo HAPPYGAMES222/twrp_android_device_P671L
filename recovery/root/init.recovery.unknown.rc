@@ -1,12 +1,12 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
+import /init.recovery.custom.rc
 export LD_LIBRARY_PATH /system/lib64:/vendor/lib64
-inport /init.recovery.custom.rc
-
 
 chown system root /system/bin/load_modules.sh
 chown system root /system/bin/prepdecrypt.sh
 chown root root /system/etc/recovery.fstab
+
 on fs
 start load_modules
 start prepdecrypt 
@@ -18,13 +18,12 @@ user root
 group root
 seclabel u:r:recovery:s0
 
- service prepdecrypt /system/bin/prepdecrypt.sh
- oneshot
- disabled
- user root
- group root
- seclabel u:r:recovery:s0
-
+service prepdecrypt /system/bin/prepdecrypt.sh
+oneshot
+disabled
+user root
+group root
+seclabel u:r:recovery:s0
 
 
 service keystore2 /system/bin/keystore2 /data/misc/keystore
@@ -46,8 +45,8 @@ disabled
 seclabel u:r:recovery:s0
     
 on property:vendor.sys.listener.registered=true
- start keymint-2-0
- start gatekeeper-1-0
+start keymint-2-0
+start gatekeeper-1-0
 
 on property:crypto.ready=1 && property:ro.crypto.state=encrypted
 start keymint-2-0
