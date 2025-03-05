@@ -6,7 +6,7 @@ inport /init.recovery.custom.rc
 
 chown system root /system/bin/load_modules.sh
 chown system root /system/bin/prepdecrypt.sh
-
+chown root root /system/etc/recovery.fstab
 on fs
 start load_modules
 start prepdecrypt 
