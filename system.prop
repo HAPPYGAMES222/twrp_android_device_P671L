@@ -10,3 +10,4 @@ sys.usb.controller=musb-hdrc.1.auto
 ro.debuggable=1
 sys.usb.ffs.ready=1
 sys.usb.state=adb
+persist.service.mtp.enable 1
