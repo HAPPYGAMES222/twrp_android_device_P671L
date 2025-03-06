@@ -13,13 +13,19 @@ ALLOW_MISSING_DEPENDENCIES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system \
-    system_ext \
-    product \
+    odm \
+    system_dlkm \
     vendor \
-    vendor_boot \
-
-
+    system \
+    boot \
+    vbmeta_vendor \
+    vbmeta \
+    vbmeta_system \
+    system_ext \
+    vendor_dlkm \
+    dtbo \
+    product \
+    vendor_boot
 
 #vendor_boot configuration
 TARGET_NO_RECOVERY := true
@@ -144,19 +150,18 @@ PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 TW_NO_SCREEN_TIMEOUT := true
 # TWRP Configuration
-TW_HAS_DOWNLOAD_MODE := true
+#TW_HAS_DOWNLOAD_MODE := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_SDCARD_ON_DATA := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.%d/lun.%d/file
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 1200
+
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TWRP_EVENT_LOGGING := true
