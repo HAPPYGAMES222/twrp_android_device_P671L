@@ -136,7 +136,7 @@ BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 #BOARD_FORCE_ENCRYPT := false
 #TW_PREPARE_DATA_MEDIA_EARLY := true
-
+BOARD_ROOT_EXTRA_FOLDERS += metadata
 # Hack: prevent anti rollback
 
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -155,7 +155,7 @@ TW_INCLUDE_REPACKTOOLS := true
 #RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.%d/lun.%d/file
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXCLUDE_NTFS_3G := true
+#TW_EXCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
 
 TWRP_INCLUDE_LOGCAT := true
