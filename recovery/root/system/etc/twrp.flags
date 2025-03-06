@@ -46,8 +46,8 @@
 /miscdata            emmc      /dev/block/by-name/miscdata          flags=display=miscdata;backup=1;flashimg=1
 #
 #SD cards
-/external_sd	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=display="MicroSD Card 1";storage;wipeingui;removable
-/external_sd    vfat        /dev/block/mmcblk1p1	/dev/block/mmcblk1 	flags=display="MicroSD Card 2";storage;wipeingui;removable
+/external_sd	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=display="MicroSD Card 1";storage;wipeingui;removable
+/external_sd    auto        /dev/block/mmcblk1p1	/dev/block/mmcblk1 	flags=display="MicroSD Card 2";storage;wipeingui;removable
 /external_sd	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=display="MicroSD Card 3";storage;wipeingui;removable
 /external_sd    auto        /dev/block/mmcblk1p1	/dev/block/mmcblk1 	flags=display="MicroSD Card 4";storage;wipeingui;removable
 
