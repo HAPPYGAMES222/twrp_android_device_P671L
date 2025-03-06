@@ -44,4 +44,4 @@ system_dlkm /system_dlkm erofs ro wait,avb=vbmeta_system_ext,logical,first_stage
 /dev/block/by-name/cache /cache ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check,formattable
 /dev/block/by-name/tranfs /tranfs ext4 rw,noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check,formattable,nofail,first_stage_mount
 /dev/block/by-name/prodnv /mnt/vendor ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check
-/dev/block/by-name/miscdata /miscdata emmc defaults default
+/dev/block/by-name/miscdata /miscdata emmc defaults defaults
