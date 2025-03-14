@@ -97,7 +97,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := itel_dynamic_partitions
-BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system_ext vendor odm product vendor_dlkm system_dlkm
+BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system_ext vendor odm product vendor_dlkm
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # https://source.android.com/devices/bootloader/partitions/generic-boot#combinations, "Launch device without recovery partition":
 
