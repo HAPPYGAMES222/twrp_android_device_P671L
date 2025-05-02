@@ -61,7 +61,7 @@ stop keymint-2-0
 stop gatekeeper-1-0
 
 on boot
-install_keyring
+#install_keyring
 start keymint-2-0
 start gatekeeper-1-0
 start boot-hal-1-0
