@@ -20,6 +20,8 @@ subsystem sound
     devname uevent_devpath
     dirname /dev/snd
 
+
+
 subsystem dma_heap
    devname uevent_devpath
    dirname /dev/dma_heap
@@ -29,7 +31,9 @@ subsystem dma_heap
 # format for /dev rules: devname mode uid gid
 # format for /sys rules: nodename attr mode uid gid
 # shortcut: "mtd@NN" expands to "/dev/mtd/mtdNN"
-
+/dev/block/*      0660   root   root
+/dev/mmcblk*      0660   root   root
+/dev/by-name/*    0660   root   root
 /dev/null                 0666   root       root
 /dev/zero                 0666   root       root
 /dev/full                 0666   root       root
