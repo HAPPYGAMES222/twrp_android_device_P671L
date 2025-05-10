@@ -4,7 +4,7 @@ import /ueventd.ums9230_P671L.rc
 export LD_LIBRARY_PATH /system/lib64:/vendor/lib64
 
 on early-init
-mount /dev
+mount root root /dev
 mkdir /dev/block 0755 root root
 chmod 0775 /dev
 on init
