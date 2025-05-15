@@ -17,6 +17,9 @@ AB_OTA_PARTITIONS += \
     system_ext \
     product \
     vendor \
+    odm \
+    vendor_dlkm \
+    system_dlkm \
     vendor_boot \
 
 
@@ -61,7 +64,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_VENDOR_BASE := 0x00000000
 # TODO: remove "androidboot.." from kernel cmdline after verification
-BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 bootconfig bootconfig androidboot.selinux androidboot.selinux=permissive
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 bootconfig bootconfig
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -115,7 +118,7 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 
 # Platform
 BOARD_USES_SPRD_HARDWARE := true
-TARGET_BOARD_PLATFORM := ums9230
+TARGET_BOARD_PLATFORM := ums9230_P671L
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
@@ -131,7 +134,7 @@ TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 #BOARD_FORCE_ENCRYPT := false
-#TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Hack: prevent anti rollback
 
@@ -141,16 +144,16 @@ PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # TWRP Configuration
-TW_HAS_DOWNLOAD_MODE := true
+
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
+#TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_SDCARD_ON_DATA := true
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
@@ -166,7 +169,7 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_ENABLE_ALL_PARTITION_TOOLS := true
 TW_USE_NEW_MINADB := true
 TW_DEVICE_VERSION := Itel_P65-Massatrio16
-
+TW_OEM_BUILD := true
 
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
