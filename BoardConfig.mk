@@ -13,6 +13,8 @@ ALLOW_MISSING_DEPENDENCIES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
+    boot \
+    init_boot \
     system \
     system_ext \
     product \
@@ -167,9 +169,9 @@ TW_NO_FLASH_CURRENT_TWRP := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_ENABLE_ALL_PARTITION_TOOLS := true
-TW_USE_NEW_MINADB := true
+#TW_USE_NEW_MINADB := true
 TW_DEVICE_VERSION := Itel_P65-Massatrio16
-TW_OEM_BUILD := true
+#TW_OEM_BUILD := true
 
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
