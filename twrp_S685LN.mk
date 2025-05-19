@@ -15,16 +15,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from itel-S685LN device
-$(call inherit-product, device/itel/S685LN/device.mk)
+#$(call inherit-product, device/itel/S685LN/device.mk)
 
 
-
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, device/itel/S685LN/twrp_device.mk)
 
 PRODUCT_DEVICE := S685LN
 PRODUCT_NAME := twrp_S685LN
-PRODUCT_BRAND := Itel
-PRODUCT_MODEL := itel S685LN
+PRODUCT_BRAND := itel
+PRODUCT_MODEL := S685LN
 PRODUCT_MANUFACTURER := itel
-PRODUCT_RELEASE_NAME := Itel S685LN
+
 
 
