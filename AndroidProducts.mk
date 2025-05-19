@@ -9,6 +9,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_S685LN.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_S685LN-eng \
-    twrp_S685LN-user \
-    twrp_S685LN-userdebug
+    twrp_S685LN-ap2a-eng \
+    twrp_S685LN-ap2a-user \
+    twrp_S685LN-ap2a-userdebug
